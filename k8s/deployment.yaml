@@ -11,11 +11,13 @@ spec:
       labels:
         app: webcolor
     spec:
+      serviceAccountName: dev-sa
       containers:
       - name: webcolor
-        image: fabricioveronez/web-page:blue
+        image: fabricioveronez/web-page:green
         ports:
         - containerPort: 80
+    
 ---
 apiVersion: v1
 kind: Service
